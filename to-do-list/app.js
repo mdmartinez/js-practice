@@ -8,11 +8,11 @@ document.addEventListener('DOMContentLoaded', function() {
   tasksUl = document.querySelector('.task-bucket ul'),
   taskBucket = document.querySelector('.task-bucket');
 
-  // "Add a task" button event handle
+  // "Add task" button event handle
   addTask.addEventListener('submit', function(action) {
     // logs the value of input field to the console
     action.preventDefault();
-    const value = addTask.querySelector('input[type=text]').value;
+    let value = addTask.querySelector('input[type=text]').value;
     console.log(value);
 
     // Creates new elements
@@ -35,8 +35,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // erases placeholder text for empty task bin
     if(taskLog.children[0].className !== "task-bucket") {
-      return taskLog.removeChild(document.querySelector('.initial-prompt'));
+      taskLog.removeChild(document.querySelector('.initial-prompt'));
     }
+
+    // resets input field
+    addTask.reset();
+
   });
 
   hideTasks.addEventListener('change', function(e) {
