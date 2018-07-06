@@ -58,4 +58,19 @@ document.addEventListener('DOMContentLoaded', function() {
     tasksUl.removeChild(li);
   });
 
+  const searchbar = document.querySelector('#search-field');
+  searchbar.addEventListener('keyup', function(e) {
+    const term = e.target.value.toLowerCase();
+    let liTags = Array.from(tasksUl.getElementsByTagName('li'));
+
+    liTags.map(function(li) {
+      let liContent = li.firstElementChild.textContent;
+      if (liContent.toLowerCase().indexOf(term) != -1) {
+        li.style.display = 'block';
+      } else {
+        li.style.display = 'none';
+      }
+    });
+  });
+
 });
