@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+  <script type="text/javascript" src="app.js"></script>
+  <title>To Do List</title>
+</head>
+<body>
+  <div class="task-tackler">
+    <div class="heading">
+      <h1>Task Tackler</h1>
+      <h4>Don't miss a step</h4>
+    </div>
+    <form>
+      <div class="create-task">
+        <input type="text" name="task" id="task" type="submit">
+        <button type="submit">Add task</button>
+        <input type="checkbox" name="hide" id="hide">
+        <label for="hide" class="hide-tasks">Hide tasks</label>
+      </div>
+    </form>
+    <div class="task-logger">
+      <div class="initial-prompt">
+        <p>Start adding tasks to tackle!</p>
+      </div>
+      <div class="task-bucket">
+        <ul>
+        <!-- fills by users generating tasks -->
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

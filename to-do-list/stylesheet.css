@@ -1,0 +1,98 @@
+/*Global Styles*/
+body {
+  font-family: Century Gothic;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+/*Task Tackler*/
+.task-tackler {
+  max-width: 50vw;
+  height: 75vh;
+  background-color: lightgrey;
+  margin: 4em auto 0;
+  border-radius: 7px;
+
+}
+
+.heading {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 2.5em;
+}
+
+.create-task {
+  padding: 2em 0;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.initial-prompt {
+  text-align: center;
+  padding-top: 3em;
+}
+
+.task-logger {
+  width: 80%;
+  height: 35%;
+  background-color: lightblue;
+  margin: 0 auto;
+  padding: 1em 0;
+  border-radius: 7px;
+  list-style: none;
+  overflow: scroll;
+}
+
+.task-logger li {
+  line-height: 3em;
+}
+
+.tasks {
+  padding: 3em 0 3em 3em;
+}
+
+.remove {
+  margin-left: 3em;
+  background-color: red;
+  width: 5em;
+  border-radius: 5px;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  font-size: .7em;
+  color: white;
+  display: inline-block;
+  line-height: 2em;
+}
+
+.remove:hover {
+  background-color: #10b557;
+  transition: all 0.2s ease-in-out;
+}
+
+.remove:active {
+  background-color: #0d7c3d;
+}
+
+input .task {
+  margin-top: 0 auto;
+  position: relative;
+  display: block;
+  border-radius: 3px;
+}
+
+.hide-tasks {
+  font-size: .8em;
+  color: green;
+}
+
+button {
+  margin-top: 0 auto;
+  position: relative;
+  display: block;
+}
