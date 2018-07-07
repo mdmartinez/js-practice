@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', function() {
   // defines variables
   const addTask = document.querySelector('form'),
-  taskLog = document.querySelector('.task-logger'),
+  taskLog = document.querySelector('.task-bin'),
   initialPrompt = document.querySelector('.initial-prompt'),
   deleteButton = document.querySelector('.remove'),
-  hideTasks = document.querySelector('#hide'),
-  tasksUl = document.querySelector('.task-bucket ul'),
-  taskBucket = document.querySelector('.task-bucket');
+  hideTasks = document.querySelector('.hide-checkbox'),
+  tasksUl = document.querySelector('.new-element-bin ul'),
+  newElementBin = document.querySelector('.new-element-bin');
 
   // "Add task" button event handle
   addTask.addEventListener('submit', function(action) {
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
     tasksUl.appendChild(li);
 
     // erases placeholder text for empty task bin
-    if(taskLog.children[0].className !== "task-bucket") {
+    if(taskLog.children[1].className !== "new-element-bin") {
       taskLog.removeChild(document.querySelector('.initial-prompt'));
     }
 

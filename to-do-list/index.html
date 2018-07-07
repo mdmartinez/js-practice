@@ -8,29 +8,30 @@
   <title>To Do List</title>
 </head>
 <body>
-  <div class="task-tackler">
+  <div class="canvas">
     <div class="heading">
-      <h1>Task Tackler</h1>
-      <h4>Don't miss a step</h4>
+      <h1>Today's To-Do</h1>
     </div>
     <form>
-      <div class="create-task">
-        <input type="text" name="task" id="new-task" placeholder="Add a task">
-        <button type="submit" id="submit-button">Add task</button>
-        <input type="checkbox" name="hide" id="hide">
-        <label for="hide" class="hide-tasks">Hide tasks</label>
+      <div class="create-task-bin">
+        <input type="text" name="task" id="new-task" placeholder="Type something good..">
+        <button type="submit" id="submit-button">+ Add task</button>
       </div>
     </form>
-    <input type="search" name="search" id="search-field" placeholder="Search tasks" onkeyup="">
-    <div class="task-logger">
+    <div class="task-bin">
+      <input type="search" name="search" id="search-field" placeholder="Search tasks">
       <div class="initial-prompt">
-        <p>Start adding tasks to tackle!</p>
+        <p>"Today I will do what others won't,<br /> so tomorrow I can do what others can't."</p>
       </div>
-      <div class="task-bucket">
+      <div class="new-element-bin">
         <ul>
         <!-- fills by users generating tasks -->
         </ul>
       </div>
+    </div>
+    <div class="hide-task-bin">
+      <input type="checkbox" name="hide" class="hide hide-checkbox">
+      <label for="hide" class="hide hide-label">Hide all tasks</label>
     </div>
   </div>
 </body>
