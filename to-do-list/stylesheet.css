@@ -62,8 +62,8 @@ h2 {
 }
 
 #new-task::placeholder {
-  color: #383838;
-  font-size: 14px;
+  color: #5e5b5b;
+  font-size: 15px;
 }
 
 #new-task:focus {
@@ -185,7 +185,7 @@ h2 {
 }
 
 #search-field::placeholder {
-  color: #383838;
+  color: #5e5b5b;
   font-size: 12px;
   padding-left: 7px;
 }
