@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', function() {
   addTask.addEventListener('submit', function(action) {
     // logs the value of input field to the console
     action.preventDefault();
+
+    // prevents empty inputs from being logged
+    if(document.querySelector('#new-task').value==="") {
+     return action.preventDefault();
+    }
+
     let value = addTask.querySelector('input[type=text]').value;
     console.log(value);
 
@@ -63,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const term = e.target.value.toLowerCase();
     let liTags = Array.from(tasksUl.getElementsByTagName('li'));
 
+    // enables search functionality
     liTags.map(function(li) {
       let liContent = li.firstElementChild.textContent;
       if (liContent.toLowerCase().indexOf(term) != -1) {
