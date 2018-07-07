@@ -13,13 +13,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // logs the value of input field to the console
     action.preventDefault();
 
-    // prevents empty inputs from being logged
-    if(document.querySelector('#new-task').value==="") {
-     return action.preventDefault();
-    }
-
-    let value = addTask.querySelector('input[type=text]').value;
+    let value = document.querySelector('#new-task').value;
     console.log(value);
+
+    // prevents empty inputs from being logged
+    if(value.trim().length === 0) {
+      return action.preventDefault();
+    } else {
+      value.trim();
+    }
 
     // Creates new elements
     const li = document.createElement("li"),
