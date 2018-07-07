@@ -19,8 +19,8 @@ h2 {
   width: 40vw;
   height: 95vh;
   margin: 1em auto;
-  border: 1px solid #7AA7CF;
-  border-radius: 4px;
+  border: 1px solid #ceccbb;
+  border-radius: 7px;
 }
 
 /* Heading Styles */
@@ -176,11 +176,18 @@ h2 {
   background-color: white;
   border-radius: 4px;
   border: 1px solid #cacaca;
+  height: 2.5em;
 }
 
 #search-field:focus {
   border: 1px solid #7AA7CF;
   outline-width: 0;
+}
+
+#search-field::placeholder {
+  color: #383838;
+  font-size: 12px;
+  padding-left: 7px;
 }
 
 #search-field::-webkit-search-cancel-button {
