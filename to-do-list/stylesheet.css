@@ -16,11 +16,14 @@ h2 {
 /* Body Styles */
 .canvas {
   background-color: #ffffff;
-  width: 40vw;
+  width: 55%;
   height: 95vh;
   margin: 1em auto;
   border: 1px solid #ceccbb;
   border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 /* Heading Styles */
@@ -34,31 +37,28 @@ h2 {
 /* Create task styles */
 
 .create-task-bin {
+  display: flex;
+  flex-direction: column;
   padding: 2em 0;
   width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Add a task input field and Add task button styles */
-.create-task {
-  position: relative;
-}
 
 #new-task {
+  flex: 1 1 auto;
   margin: 0 auto;
   display: block;
   text-align: center;
-  position: relative;
-  left: 50%;
-  margin-left: -104px;
-  width: 13em;
+  width: 60%;
   height: 2em;
   background-color: white;
   color: #383838;
   border-radius: 7px;
   font-size: 1em;
   border: 1px solid #cacaca;
-  box-sizing: border-box;
 }
 
 #new-task::placeholder {
@@ -71,19 +71,15 @@ h2 {
   outline-width: 0;
 }
 
-
 #submit-button {
-  margin-top: 0 auto;
-  position: relative;
+  flex: 1 1 auto;
+  margin: 1.5em auto 0 auto;
   display: block;
-  left: 50%;
-  margin: 1.5em 0 0 -112px;
-  width: 16em;
+  width: 63%;
   height: 2.5em;
   background-color: #28A956;
   color: white;
   border-radius: 7px;
-  box-sizing: border-box;
   font-size: 14px;
 }
 
@@ -121,6 +117,8 @@ h2 {
   border-radius: 7px;
   list-style: none;
   overflow: scroll;
+  display: flex;
+  flex-direction: column;
 }
 
 .task-bin:webkit-scrollbar {
@@ -135,10 +133,13 @@ h2 {
 .initial-prompt {
   text-align: center;
   padding-top: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .tasks {
-  padding: 0 0 0 3em;
+  padding: 0 0 0 10%;
   font-size: 14px;
   font-weight: 500;
 }
@@ -170,6 +171,7 @@ h2 {
 
 #search-field {
   position: relative;
+  flex: 0 1 auto;
   left: 5%;
   margin-bottom: 1em;
   border-color: transparent;
@@ -177,6 +179,8 @@ h2 {
   border-radius: 4px;
   border: 1px solid #cacaca;
   height: 2.5em;
+  width: 35%;
+  text-indent: 5%;
 }
 
 #search-field:focus {
@@ -187,10 +191,30 @@ h2 {
 #search-field::placeholder {
   color: #5e5b5b;
   font-size: 12px;
-  padding-left: 7px;
 }
 
 #search-field::-webkit-search-cancel-button {
   /* Cancels chrome browswer auto clear button */
   display: none;
+}
+
+/* Media Query Styles */
+
+@media (max-width: 850px) {
+
+  .canvas {
+    width: 75%;
+    height: 105vh;
+  }
+
+  .task-bin {
+  width: 75%;
+  height: 42%;
+}
+
+@media (max-width: 450px) {
+
+  .canvas {
+    width: 90%;
+  }
 }
