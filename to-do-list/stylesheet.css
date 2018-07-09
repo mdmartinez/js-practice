@@ -200,16 +200,15 @@ h2 {
 
 /* Media Query Styles */
 
-@media (max-width: 850px) {
+@media (max-width: 750px) {
 
   .canvas {
     width: 75%;
-    height: 105vh;
   }
 
   .task-bin {
   width: 75%;
-  height: 42%;
+  height: 45%;
 }
 
 @media (max-width: 450px) {
