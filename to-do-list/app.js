@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
   const addTask = document.querySelector('form'),
   taskLog = document.querySelector('.task-bin'),
   initialPrompt = document.querySelector('.initial-prompt'),
-  deleteButton = document.querySelector('.remove'),
   hideTasks = document.querySelector('.hide-checkbox'),
   tasksUl = document.querySelector('.new-element-bin ul'),
+  deleteButton = document.querySelector('.remove'),
   newElementBin = document.querySelector('.new-element-bin');
 
   // "Add task" button event handle
@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Creates new elements
     const li = document.createElement("li"),
     task = document.createElement("span"),
-    remove = document.createElement("span")
+    remove = document.createElement("span");
 
     // Assigns new element the user-submitted value
     task.textContent = value;
@@ -52,18 +52,12 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   hideTasks.addEventListener('change', function(e) {
-    // hides taks list
+    // hides tasks list
     if(hideTasks.checked) {
       tasksUl.style.display = 'none';
     } else {
       tasksUl.style.display = 'initial';
     }
-  });
-
-  tasksUl.addEventListener('click', function(e) {
-    // removes completed tasks from the bin
-    const li = e.target.parentElement;
-    tasksUl.removeChild(li);
   });
 
   const searchbar = document.querySelector('#search-field');
@@ -81,5 +75,13 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  tasksUl.addEventListener('click', function(e) {
+        // removes completed tasks from the bin
+        if(e.target.className === "remove") {
+          const li = e.target.parentElement;
+          tasksUl.removeChild(li);
+        }
+      });
 
 });
