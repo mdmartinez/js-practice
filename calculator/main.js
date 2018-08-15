@@ -47,7 +47,7 @@ function clearLogic() {
 
 function numberWithCommas(num) {
     // Function to add commas
-    const number = num.replace(/,/g, '');
+    const number = num.toString().replace(/,/g, '');
     return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
@@ -86,10 +86,10 @@ function displayEntry(e) {
     });
 
     // Allows you to type new number after a previous result
-    if (result !== undefined || result !== '') {
-        calcDisplay.innerHTML = this.textContent;
-        result = undefined;
-    }
+    // if (result !== undefined || result !== '') {
+    //     calcDisplay.innerHTML = this.textContent;
+    //     result = undefined;
+    // }
 
     // Stores current value displayed on calculator
     currentValue = parseFloat(calcDisplay.innerHTML);
@@ -122,7 +122,7 @@ function calculate() {
     }
     
     result = operators[selectedOperator](lastValue, currentValue);
-    calcDisplay.innerHTML = result;
+    calcDisplay.innerHTML = numberWithCommas(result);
     lastValue = result;
 }
 
