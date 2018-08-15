@@ -1,3 +1,4 @@
+/*Global Styles*/
 body {
   margin: 0 0 0 0;
   padding: 0 0 0 0;
@@ -15,6 +16,7 @@ p, a {
   font-family: Raleway;
 }
 
+/*Sidebar Navigation Styles*/
 nav {
   position: fixed;
   z-index: 0;
@@ -44,6 +46,7 @@ nav {
   color: white;
 }
 
+/*Hamburger Styles*/
 .hamburger-container {
   position: fixed;
   z-index: 2;
@@ -52,10 +55,6 @@ nav {
   height: 25px;
   width: 30px;
   transition: left 0.7s ease;
-}
-
-.hamburger-container.open {
-  left: 20%;
 }
 
 .hamburger {
@@ -93,6 +92,11 @@ nav {
   border-radius: 1px;
 }
 
+/*Hamburger Transition Styles*/
+.hamburger-container.open {
+  left: 20%;
+}
+
 .open .hamburger {
   left: -10%;
   transition: left 0.6s ease;
@@ -112,6 +116,12 @@ nav {
   top: 40px;
 }
 
+/*Page Transition Styles*/
+.focus-content.open {
+  margin-left: 15%;
+}
+
+/*Page Styles*/
 .focus-content {
   position: relative;
   padding-top: 20px;
@@ -122,10 +132,6 @@ nav {
   transition: margin 0.7s ease;
   background-color: white;
   overflow: scroll;
-}
-
-.focus-content.open {
-  margin-left: 15%;
 }
 
 .two-column {
