@@ -6,8 +6,9 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    width: 99vw;
-    height: 100vh;
+    padding-top: 150px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     flex: 1 1 auto;
 }
@@ -17,6 +18,7 @@ body {
     flex-direction: column;
     width: 400px;
     height: auto;
+    margin-bottom: 150px;
     text-align: center;
     flex: 0 1 auto;
 }
@@ -24,6 +26,7 @@ body {
 .calculator {
     height: 450px;
     width: 300px;
+    margin-bottom: 150px;
     border: 1px black solid;
     display: flex;
     flex-direction: column;
@@ -43,7 +46,7 @@ body {
     display: flex;
     background-color: rgba(0, 0, 0, 0.9);
     border-radius: 8px;
-    flex: 1; 
+    flex: 1;
     color: white;
     font-size: 45px;
     justify-content: flex-end;
@@ -69,7 +72,7 @@ body {
     flex: 1;
     list-style: none;
     padding: 0;
-    margin:0;
+    margin: 0;
 }
 
 .buttons .row li {
@@ -87,7 +90,7 @@ body {
 .buttons .row li span {
     border-radius: 50%;
     background-color: rgb(59, 59, 59);
-    color:white; 
+    color: white;
     width: 60px;
     height: 60px;
     display: flex;
@@ -106,8 +109,8 @@ body {
 .buttons .row-5 li:first-child span {
     width: 110px;
     height: 60px;
-    border-radius: 50px; 
-    margin-left: 7px; 
+    border-radius: 50px;
+    margin-left: 7px;
     display: flex;
     justify-content: flex-start;
     padding-left: 25px;
@@ -134,7 +137,7 @@ body {
 
 .buttons .row li span.operator.active {
     background-color: white;
-    color:orange;
+    color: orange;
     transition: background 500ms ease,
     color 500ms ease;
 }
